@@ -133,7 +133,7 @@
 #### QUESTION 18 OF 19
 ## Can you save an object inside of an object?
 - [x] Yes
-- [] No
+- [ ] No
 
 <br/>
 
