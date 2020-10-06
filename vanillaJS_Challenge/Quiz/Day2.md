@@ -55,7 +55,7 @@
 
 #### QUESTION 8 OF 19
 ## Is "4" a number in JavaScript?
-- [] Yes
+- [ ] Yes
 - [x] No
 
 <br/>
