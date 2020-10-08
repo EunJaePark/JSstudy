@@ -117,7 +117,7 @@ init();
 
 <br/>
 
-#### 📝 [Quiz](Quiz/Day4.md)
+#### 📝 [Quiz](Quiz/day4.md)
 
 
 
