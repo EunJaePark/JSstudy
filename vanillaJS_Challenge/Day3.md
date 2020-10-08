@@ -137,3 +137,4 @@ window.addEventListener("resize", handleResize);
 <br/>
 
 
+#### 📝 [Quiz](Quiz/Day3.md)
