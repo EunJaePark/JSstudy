@@ -137,4 +137,4 @@ window.addEventListener("resize", handleResize);
 <br/>
 
 
-#### 📝 [Quiz](https://github.com/EunJaePark/JSstudy/tree/main/vanillaJS_Challenge/Quiz/Day3)
+#### 📝 [Quiz](https://github.com/EunJaePark/JSstudy/tree/main/vanillaJS_Challenge/Quiz/day3)
