@@ -117,7 +117,7 @@ init();
 
 <br/>
 
-#### 📝 [Quiz](Quiz/day4.md)
+#### 📝 [Quiz](https://github.com/EunJaePark/JSstudy/tree/main/vanillaJS_Challenge/Quiz/day4)
 
 
 
