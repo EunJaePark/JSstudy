@@ -126,7 +126,12 @@ init();
   - event가 발생하면 root에서 일어나고 form에서 일어난다. event는 마지 bubble같은 것. 
   - 따라서 event가 계속 위로 올라가는 것을 막기위해 `preventDefault()`를 사용하는 것이다.
 
+<br/>
 
+#### 📝 [Quiz]()
+
+- 참고
+    - http://blog.naver.com/PostView.nhn?blogId=magnking&logNo=221164677877
 
 
 
