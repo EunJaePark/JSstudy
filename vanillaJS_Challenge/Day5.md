@@ -128,8 +128,8 @@ init();
 
 <br/>
 
-#### 📝 [Quiz](https://codesandbox.io/s/day-five-blueprint-forked-jgtiy?file=/src/index.js)
-- - 내 코드 답안: https://codesandbox.io/s/day-five-blueprint-forked-jgtiy?file=/src/index.js 
+#### 📝 [Quiz](https://github.com/EunJaePark/JSstudy/tree/main/vanillaJS_Challenge/Quiz/Day5)
+- 내 코드 답안: https://codesandbox.io/s/day-five-blueprint-forked-jgtiy?file=/src/index.js 
 
 - 참고
     - http://blog.naver.com/PostView.nhn?blogId=magnking&logNo=221164677877
