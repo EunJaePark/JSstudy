@@ -128,7 +128,7 @@ init();
 
 <br/>
 
-#### 📝 [Quiz]()
+#### 📝 [Quiz](https://codesandbox.io/s/day-five-blueprint-forked-jgtiy?file=/src/index.js)
 
 - 참고
     - http://blog.naver.com/PostView.nhn?blogId=magnking&logNo=221164677877
