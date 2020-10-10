@@ -25,13 +25,13 @@ function reloadPage() {
 // }
 function reloadSaveCountry(LScountry) {
     select.value = LScountry;
+    reloadSaveCountry(LScountry);
 }
 
 function getLSCountry() {
     const LScountry = localStorage.getItem('country');
     console.log(LScountry);
     // compareCountry(LScountry);
-    reloadSaveCountry(LScountry);
     answerText(LScountry);
 }
 
