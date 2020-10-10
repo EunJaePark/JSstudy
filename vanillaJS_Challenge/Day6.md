@@ -84,5 +84,5 @@ init();
 
 <br/>
 
-#### 📝 [Quiz](https://github.com/EunJaePark/JSstudy/tree/main/vanillaJS_Challenge/Quiz/Day5)
-- 내 코드 답안: https://codesandbox.io/s/day-five-blueprint-forked-jgtiy?file=/src/index.js 
+#### 📝 [Quiz](https://github.com/EunJaePark/JSstudy/tree/main/vanillaJS_Challenge/Quiz/Day6)
+- 내 코드 답안: https://codesandbox.io/s/day-six-blueprint-forked-2zdu4?file=/src/index.js 
