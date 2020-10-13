@@ -40,5 +40,5 @@
 
 <br/>
 
-#### 📝 [Quiz](https://github.com/EunJaePark/JSstudy/tree/main/vanillaJS_Challenge/Quiz/Day7%2C8)
+#### 📝 [Quiz](https://github.com/EunJaePark/JSstudy/tree/main/vanillaJS_Challenge/Qiz/Day7%2C8)
 - 내 코드 답안: https://codesandbox.io/s/empty-blueprint-forked-ijf36?file=/src/index.js
