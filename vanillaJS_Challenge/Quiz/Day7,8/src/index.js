@@ -21,7 +21,7 @@ function reTodo(event) {
 
     // 1) PENDING ul에 완료취소된 todo를 todo를 뿌려줌.
     const finishedTodo = finishToDoArr.filter(ele => {
-        return (ele.id === parseInt(reTarget.id) && ele.text === reTarget.innerText.replace('👎', ''));
+        return (ele.id === parseInt(reTarget.id) && ele.text === reTarget.innerText.slice(0, reTarget.innerText.length - 2));
     });
     paintToDos(finishedTodo[0].text);
 
@@ -56,13 +56,25 @@ function finishTodo(event) {
 function removeTodo(event) {
     const target = event.target;
     const delTarget = target.parentNode;
-    pendingList.removeChild(delTarget);
-    const filterTodo = toDoArr.filter(ele => {
-        return ele.id !== parseInt(delTarget.id);
-    });
+    const targetCheck = delTarget.parentNode;
+    console.log(targetCheck.className);
 
-    toDoArr = filterTodo;
-    saveToDos();
+    if(targetCheck.className === 'finishedList') {
+        finishedList.removeChild(delTarget);
+        const filterFinishedTodo = finishToDoArr.filter(ele => {
+            return ele.id !== parseInt(delTarget.id);
+        });
+        finishToDoArr = filterFinishedTodo;
+        saveFinishToDos();
+    } else {
+        pendingList.removeChild(delTarget);
+        const filterTodo = toDoArr.filter(ele => {
+            return ele.id !== parseInt(delTarget.id);
+        });
+    
+        toDoArr = filterTodo;
+        saveToDos();
+    }   
 }
 
 function getLStodos() {
@@ -89,15 +101,19 @@ function saveToDos() {
 
 function paintFinishedToDos(finishTodo) {
     const liFinish = document.createElement('li');
+    const delBtn = document.createElement('button');
     const reBtn = document.createElement('button');
+    delBtn.addEventListener('click', removeTodo);
     reBtn.addEventListener('click', reTodo);
 
     liFinish.innerText = finishTodo.text;
     liFinish.id = finishTodo.id;
 
-    reBtn.innerText = '👎';
+    delBtn.innerText = '❌';
+    reBtn.innerText = '⏪';
     
     finishedList.appendChild(liFinish);
+    liFinish.appendChild(delBtn);
     liFinish.appendChild(reBtn);
 
     const todoData = {
@@ -120,7 +136,7 @@ function paintToDos(newTodo) {
     li.id = newId;
 
     delBtn.innerText = '❌';
-    finishBtn.innerText = '👌'
+    finishBtn.innerText = '✅'
 
     pendingList.appendChild(li);
     li.appendChild(delBtn);
