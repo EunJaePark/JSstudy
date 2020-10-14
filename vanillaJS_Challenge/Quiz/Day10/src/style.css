@@ -1,0 +1,11 @@
+body {
+    font-family: sans-serif;
+  }
+
+.resultBox{
+    display: none;
+}
+
+.show{
+    display: block;
+}
