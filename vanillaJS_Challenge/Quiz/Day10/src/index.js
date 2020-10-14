@@ -12,7 +12,7 @@ const rangeText = document.querySelector('.rangeText'),
     randomNum = document.querySelector('.randomNum'),
     winOrNot = document.querySelector('.winOrNot');
 let myNumber = '',
-    randomNumber = inputRange.value,
+    randomNumber = '',
     range = inputRange.value;
 
 
