@@ -65,6 +65,7 @@ function handledSubmit(event) {
         myNumber = inputNumber.value;
         printNum();
     }
+    inputNumber.value = '';
 }
 
 function init() {  
