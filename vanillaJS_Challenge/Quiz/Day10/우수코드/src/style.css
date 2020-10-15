@@ -1,0 +1,53 @@
+body {
+    font-family: sans-serif;
+  }
+  
+  h3 {
+    margin: -15px 0 30px 0;
+  }
+  
+  .guess-number {
+    display: flex;
+    align-items: center;
+  }
+  
+  .num-range {
+    -webkit-appearance: none;
+    width: 350px;
+    margin-bottom: 20px;
+  }
+  
+  .num-range::-webkit-slider-runnable-track {
+    height: 5px;
+    background: palegreen;
+    border: none;
+    border-radius: 2px;
+  }
+  
+  .num-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: rgb(248, 180, 248);
+    margin-top: -4px;
+  }
+  
+  .num-range:focus {
+    outline: none;
+  }
+  
+  .num-range:active::-webkit-slider-runnable-track {
+    background: rgb(170, 225, 247);
+  }
+  
+  input[type="number"]:focus {
+    outline: none;
+    color: red;
+  }
+  
+  h5 {
+    margin-top: 10px;
+  }
+  
