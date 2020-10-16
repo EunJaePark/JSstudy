@@ -4,10 +4,7 @@
 
 const topResetZone = document.querySelector('.topResetZone'),
     operationZone = document.querySelector('.operationZone'),
-    numberZone = document.querySelector('.numberZone'),
-    topResetInput = topResetZone.querySelectorAll('input'),
-    operationInput = operationZone.querySelectorAll('input'),
-    numberInput = numberZone.querySelectorAll('input');
+    numberZone = document.querySelector('.numberZone');
 let berofeResult = document.querySelector('.beforeResult'),
     resultNum = document.querySelector('.resultNum'),
     number = '',
@@ -95,13 +92,16 @@ function handleNumberZone(event) {
     const clickNum = event.target;
     if(clickNum.localName !== 'input') return; // numberZone에서 input이 아닌 여백 클릭시 return.
 
-    if(operationNow === 'empty') {
-        number = number + clickNum.value;
-        insertIntoPrint(number);
-    } else {
-        number = number + clickNum.value;
-        insertIntoPrint(number);
-    }
+    number = number + clickNum.value;
+    insertIntoPrint(number);
+
+    // if(operationNow === 'empty') {
+    //     number = number + clickNum.value;
+    //     insertIntoPrint(number);
+    // } else {
+    //     number = number + clickNum.value;
+    //     insertIntoPrint(number);
+    // }
 }
 
 function init() {
