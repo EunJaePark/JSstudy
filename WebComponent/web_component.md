@@ -58,6 +58,8 @@ Angular와 React 컴포넌트를 이용하면 Shadow DOM을 사용할 수 있다
 
 
 
+***
+
 
 
 ## Custom Element
@@ -235,13 +237,160 @@ constructor() {
 
 
 
+## 웹 컴포넌트 라이프 사이클
+
+자주 사용하는 라이프 사이클 위주로 알아보자.
+
 ### connectedCallback & disconnectedCallback
 
 HTMLElement를 상속받은 경우 이 Custom Element가 DOM에 추가되거나 제거될 때마다 실행된다.
 
+#### `connectecCallback` 
+
+- custom element가 문서의 DOM에 처음 연결될 때 호출된다.
+
+- ```javascript
+  connectedCallback(): void {
+    // beforeCreate(Vue.js)
+    console.log(`beforeCreate`);
+    super.connectedCallback();
+    // created(Vue.js)
+    console.log(`created`);
+  }
+  ```
+
+  
+
+#### `disconnectedCallback` 
+
+- custom element가 문서의 DOM에서 연결 해제 될 때 호출된다.
+
+- ```javascript
+  disconnectedCallback(): void {
+    // beforeDestory(Vue.js)
+    super.disconnectedCallback();
+    // destroy(Vue.js)
+  }
+  ```
+
+  
+
+### update
+
+- Property 값들을 attributes에 반영한다.
+
+- lit-html의 render를 호출한다.
+
+- ```javascript
+  update(changedProperty): void {
+    // before Update(Vue.js)
+    super.update(changedProperty);
+  }
+  ```
 
 
-Lit
+
+### firstUpdated
+
+- DOM이 처음으로 업데이트 되었을 때 호출된다. element의 템플릿이 처음 만들어 졌을 때 한 번만 실행하기 위해 사용된다.
+
+- ```javascript
+  firstUpdated(): void {
+    // mounted(Vue.js)
+  }
+  ```
+
+  
+
+### updated
+
+- DOM이 업데이트되어 렌더링된 후에 호출 된다.
+
+- ```javascript
+  updated(changedProperty: PropertyValues): void {
+    console.log(changedProperty);
+  }
+  ```
+
+  
+
+
+
+***
+
+
+
+
+
+## Shadow DOM
+
+### 분리: #shadow-root
+
+쉐도우 돔은 돔 자체의 분리 역할을 한다.
+
+`#shadow-root (open)`의 style은 밖으로 영향을 주지 않는다. 마찬가지로 글로벌에 존재하는 style 역시 `#shadow-root (open)` 안에 있는 엘리먼트에 영향을 미치지 못한다.
+
+쉐도우 루트를 기준으로 `id`를 중복해서 사용이 가능하며, 루트 안팎의 동일한 `class` 역시 전혀 다른 클래스의 역할을 수행한다.
+
+쉐도우 루트 밖에서 쉐도우 돔의 엘리먼트를 셀렉트 할 수도 없다. 
+
+```javascript
+// shadowDOM의 엘리먼트 호출 방법.
+this.shadowRoot.querySelector('엘리먼트id')
+```
+
+
+
+
+
+## 조합: `<slot>`
+
+`slot`은 HTML에서 조합을 지어 나타나 특별한 기능을 수행할 수 있다. `ol` + `li`, `select` + `item`, `form` + `input` 등이 그 예이다.
+
+- 쉐도우 돔 : shadow root에 붙어있는 DOM
+- 쉐도우 루트 : `#shadow-root`
+- 쉐도우 호스트 : 쉐도우 루트의 부모. 
+- 라이트 돔 : 도큐먼트의 쉐도우 호스트에 붙어있는 노드들.
+
+> 쉐도우 돔의 슬롯이 가진 이름에 맞는 라이트 돔의 노드가 각 슬롯에 삽입된다.
+
+
+
+
+
+## 컴포넌트: 커스텀 엘리먼트 + 쉐도우 돔 = DOM OPP
+
+커스텀 엘리먼트가 가지고 있는 쉐도우 돔 트리의 엘리먼트들은 OOP에서 내부 구현에 해당한다.
+
+
+
+## shadowDOM 특징
+
+- 쉐도우 돔은 여러 번 **중첩**될 수 있다. `slot`도 마찬가지이다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
