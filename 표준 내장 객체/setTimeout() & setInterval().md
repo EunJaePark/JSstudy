@@ -220,8 +220,29 @@ setTimeout(function() {...}, 100);
 
 ## 대기 시간이 0인 `setTimeout`
 
-`setTimeout(func, 0)`이나 `setTimeout(func)`을 
+`setTimeout(func, 0)`이나 `setTimeout(func)`을 `setTimeout`의 대기 시간을 0으로 설정할 수 있다.
 
+이렇게 대기 시간을 0으로 설정하면 `func`을 가능한 빨리 실행할 수 있다. 다만, 이때 스케줄러는 현재 실행 중인 스크립트의 처리가 종료된 이후에 스케줄링한 함수를 실행한다. 
+
+이런 특징을 이용해 현재 스크립트의 실행이 종료된 **직후**에 원하는 함수가 실행될 수 있게 할 수 있다.
+
+```javascript
+setTimeout(() => alert("world"));
+
+alert("hello");
+
+// hello
+// world
+```
+
+
+<br/><br/>
+
+***
+
+<br/>
+
+[해당 글](https://ko.javascript.info/settimeout-setinterval)을 참고 함.
 
 
 
